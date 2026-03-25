@@ -82,9 +82,7 @@ force-app/
         │   ├── AIService.cls             # HTTP callout to Gemini API
         │   ├── AIService.cls-meta.xml
         │   ├── PromptBuilder.cls         # Prompt templates (summary/email/custom)
-        │   ├── PromptBuilder.cls-meta.xml
-        │   ├── AIAssistantTest.cls       # ✅ 100% coverage test suite
-        │   └── AIAssistantTest.cls-meta.xml
+        │   └── PromptBuilder.cls-meta.xml
         └── lwc/
             └── aiAssistant/
                 ├── aiAssistant.html      # Component template (4 tabs + SVG gauges)
@@ -101,82 +99,6 @@ force-app/
 - Salesforce CLI (`sf` or `sfdx`)
 - Google Gemini API key ([Get one free](https://makersuite.google.com/app/apikey))
 - API access enabled on the Salesforce org
-
----
-
-## 🚀 Installation
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/YOUR_USERNAME/salesforce-ai-sales-assistant.git
-cd salesforce-ai-sales-assistant
-```
-
-### 2. Authorize Your Org
-
-```bash
-sf org login web --alias my-org --set-default
-```
-
-### 3. Create the Custom Object: `AI_Response__c`
-
-Create these fields on the custom object:
-
-| Field Label | API Name | Type |
-|---|---|---|
-| Record ID | `RecordId__c` | Text (18) |
-| Type | `Type__c` | Text (20) — `summary`, `email`, `custom` |
-| Response | `Response__c` | Long Text Area (131072) |
-| Prompt | `Prompt__c` | Long Text Area (32768) |
-| Feedback | `Feedback__c` | Text (20) — `positive` / `negative` |
-
-### 4. Create the Custom Metadata Type: `AI_Config__mdt`
-
-| Field Label | API Name | Type |
-|---|---|---|
-| API Key | `API_Key__c` | Text (255) |
-
-Create a record named **`Default`** and paste your Gemini API key into `API_Key__c`.
-
-### 5. Add Remote Site Setting
-
-Go to **Setup → Remote Site Settings** and add:
-
-```
-Name:        Gemini_AI
-Remote Site URL: https://generativelanguage.googleapis.com
-```
-
-### 6. Deploy to Org
-
-```bash
-sf project deploy start --source-dir force-app/
-```
-
-### 7. Add to Opportunity Page Layout
-
-1. Go to the **Opportunity** object in App Builder
-2. Open **Lightning App Builder**
-3. Drag `aiAssistant` component onto the page
-4. **Activate** and **Save**
-
----
-
-## ✅ Running Tests
-
-```bash
-# Run all tests
-sf apex run test --class-names AIAssistantTest --result-format human --wait 10
-
-# Run with code coverage
-sf apex run test --class-names AIAssistantTest --code-coverage --result-format human
-
-# Run all tests in org
-sf apex run test --test-level RunLocalTests --result-format human --wait 30
-```
-
-Expected result: **100% coverage** across all 4 Apex classes with 0 failures.
 
 ---
 
@@ -274,9 +196,8 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 
 Built with ❤️ by a Salesforce Developer passionate about AI-powered CRM experiences.
 
-- **LinkedIn:** [Your LinkedIn Profile]
-- **Trailhead:** [Your Trailhead Profile]
-- **Email:** your.email@example.com
+- **LinkedIn:** [[Your LinkedIn Profile]](https://www.linkedin.com/in/yash-dabhi1)
+- **Email:** dabhiyash11111@gmail.com
 
 ---
 

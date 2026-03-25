@@ -196,7 +196,7 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 
 Built with ❤️ by a Salesforce Developer passionate about AI-powered CRM experiences.
 
-- **LinkedIn:** [[Your LinkedIn Profile]](https://www.linkedin.com/in/yash-dabhi1)
+- **LinkedIn:** (https://www.linkedin.com/in/yash-dabhi1)
 - **Email:** dabhiyash11111@gmail.com
 
 ---
